@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minas Consultoria — Área do Cliente</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/adm.js"></script>
+</head>
+<body>
+
+  <!-- LOGIN -->
+  <div id="page-login" class="page active">
+    <div class="login-page">
+      <div class="login-box">
+        <h2>Área do ADM</h2>
+        <p>Acesse sua conta para Enviar os Projetos.</p>
+
+        <div class="login-field">
+          <label>E-mail</label>
+          <input type="email" id="login-email" placeholder="seu@email.com">
+        </div>
+        <div class="login-field">
+          <label>Senha</label>
+          <input type="password" id="login-pass" placeholder="••••••••">
+        </div>
+        <p class="login-error" id="login-error">E-mail ou senha incorretos.</p>
+        <button class="btn-primary btn-full" onclick="doLogin()">Entrar</button>
+      </div>
+    </div>
+  </div>
+
+ <!-- DASHBOARD -->
+<div id="page-dashboard" class="page">
+  <div class="dashboard">
+    <div class="sidebar">
+      <div class="sidebar-logo">Minas<span>.</span>ADM</div>
+      <div class="sidebar-nav">
+        <div class="sidebar-item active" onclick="mostrarAba('clientes')">👥 Clientes</div>
+        <div class="sidebar-item" onclick="mostrarAba('upload')">📤 Enviar Resultado</div>
+        <div class="sidebar-item" onclick="mostrarAba('projetos')">📁 Todos os Projetos</div>
+      </div>
+      <div class="sidebar-logout">
+        <button class="btn-logout" onclick="doLogout()">Sair</button>
+      </div>
+    </div>
+    <div class="dash-main">
+      <div class="dash-header">
+        <h2>Painel Administrativo</h2>
+        <p>Gerencie clientes e envie resultados de projetos.</p>
+      </div>
+
+      <!-- ABA: Clientes -->
+      <div id="aba-clientes">
+        <table class="clients-table">
+          <thead>
+            <tr>
+              <th>Cliente</th>
+              <th>E-mail</th>
+              <th>Projetos</th>
+              <th>Status</th>
+              <th>Ação</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>João Silva</strong></td>
+              <td>joao@email.com</td>
+              <td>3 projetos</td>
+              <td><span class="status-badge ativo">Ativo</span></td>
+              <td><button class="btn-sm">Ver Perfil</button></td>
+            </tr>
+            <tr>
+              <td><strong>Construtora BH Ltda</strong></td>
+              <td>contato@construtbh.com</td>
+              <td>7 projetos</td>
+              <td><span class="status-badge ativo">Ativo</span></td>
+              <td><button class="btn-sm">Ver Perfil</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ABA: Upload -->
+      <div id="aba-upload" style="display:none">
+        <div class="upload-form">
+          <h3>Enviar resultado para cliente</h3>
+          <div class="form-field" style="margin-bottom:16px">
+            <label>Selecionar Cliente</label>
+            <select style="border:1px solid #e0e0e0; padding:10px 14px; font-family:Inter,sans-serif; font-size:0.9rem; width:100%">
+              <option>João Silva</option>
+              <option>Construtora BH Ltda</option>
+            </select>
+          </div>
+          <div class="form-field" style="margin-bottom:16px">
+            <label>Nome do Projeto</label>
+            <input type="text" style="border:1px solid #e0e0e0; padding:10px 14px; font-family:Inter,sans-serif; font-size:0.9rem; width:100%" placeholder="Ex: Laudo Estrutural — Residência Centro">
+          </div>
+          <div class="upload-drop">
+            <span>📄</span>
+            <p>Clique para selecionar o PDF do projeto</p>
+            <p style="font-size:0.75rem; margin-top:4px;">Somente .pdf · Máx. 50 MB</p>
+          </div>
+          <button class="btn-primary">Enviar para o Cliente</button>
+        </div>
+      </div>
+
+      <!-- ABA: Projetos -->
+      <div id="aba-projetos" style="display:none">
+        <table class="clients-table">
+          <thead>
+            <tr>
+              <th>Projeto</th>
+              <th>Cliente</th>
+              <th>Data</th>
+              <th>Tipo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Laudo Estrutural — Residência Contorno</strong></td>
+              <td>João Silva</td>
+              <td>10/06/2025</td>
+              <td>Laudo</td>
+            </tr>
+            <tr>
+              <td><strong>Projeto Estrutural — Galpão Industrial</strong></td>
+              <td>João Silva</td>
+              <td>22/04/2025</td>
+              <td>Projeto</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>

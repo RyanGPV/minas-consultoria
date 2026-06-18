@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minas Consultoria — Engenharia Civil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">
+    <span class="logo-bar"></span>
+    Minas Consultoria
+  </div>
+  <ul class="nav-links">
+    <li><a onclick="showPage('home')" class="active" id="nav-home">Início</a></li>
+    <li><a onclick="showPage('about')" id="nav-about">Quem Somos</a></li>
+    <li><a onclick="showPage('jobs')" id="nav-jobs">Trabalhe Conosco</a></li>
+  </ul>
+  <button class="btn-login" onclick="window.location.href='cliente.html'">Área do Cliente</button>
+</nav>
+
+<!-- PAGE: HOME -->
+<div class="page active" id="page-home">
+  <div class="hero">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Engenharia Civil · Consultoria Técnica</p>
+      <h1>Soluções que <em>sustentam</em> o futuro</h1>
+      <p>Projetos estruturais, laudos e consultoria especializada para obras residenciais, comerciais e de infraestrutura em Minas Gerais.</p>
+      <button class="btn-primary" onclick="showPage('about')">Conheça nossa empresa</button>
+    </div>
+    <div class="hero-image">
+      <div class="carousel">
+        <div class="carousel-slide active" style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80')"></div>
+        <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=900&q=80')"></div>
+        <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1590577976322-3d2d6a2130f7?w=900&q=80')"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section">
+    <p class="section-eyebrow">Serviços</p>
+    <h2>O que fazemos</h2>
+    <div class="rule"></div>
+    <div class="services-grid">
+      <div class="service-card">
+        
+        <h3>Projetos Estruturais</h3>
+        <p>Dimensionamento e detalhamento de estruturas em concreto armado, metálicas e mistas.</p>
+      </div>
+      <div class="service-card">
+        <h3>Laudos Técnicos</h3>
+        <p>Inspeções prediais, laudos de vistoria, análise de patologias e avaliações estruturais.</p>
+      </div>
+      <div class="service-card">
+        <h3>Consultoria Especializada</h3>
+        <p>Suporte técnico para construtoras, incorporadoras e gestão de obras complexas.</p>
+      </div>
+      <div class="service-card">
+        <h3>Fundações</h3>
+        <p>Projetos de fundações superficiais e profundas com análise geotécnica integrada.</p>
+      </div>
+      <div class="service-card">
+        <h3>Regularização de Imóveis</h3>
+        <p>Averbações, regularizações junto aos órgãos competentes e CREA.</p>
+      </div>
+      <div class="service-card">
+        <h3>Orçamento e Planejamento</h3>
+        <p>Orçamento executivo, cronograma físico-financeiro e gestão de custos de obra.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE: ABOUT -->
+<div class="page" id="page-about">
+  <div class="about-hero">
+    <div>
+      <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80" alt="Obra">
+    </div>
+    <div class="about-text">
+      <p class="section-eyebrow">Quem Somos</p>
+      <h2 style="font-family:'Playfair Display',serif; font-size:2rem; margin: 12px 0 20px;">Mais de uma década de excelência em engenharia</h2>
+      <div class="rule"></div>
+      <p>A Minas Consultoria nasceu em Belo Horizonte com o compromisso de entregar projetos de engenharia civil com rigor técnico e clareza de comunicação. Acreditamos que um bom projeto é aquele que o cliente entende.</p>
+      <p>Nossa equipe é formada por engenheiros civis com especializações em estruturas, geotecnia e gestão de obras, todos registrados no CREA-MG.</p>
+      <p>Atendemos desde reformas residenciais até projetos industriais de grande porte, sempre com acompanhamento personalizado de cada etapa.</p>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE: JOBS -->
+<div class="page" id="page-jobs">
+  <div class="jobs-header">
+    <p class="section-eyebrow">Trabalhe Conosco</p>
+    <h2 style="font-family:'Playfair Display',serif; font-size:2rem; margin:12px 0 8px;">Faça parte do nosso time</h2>
+    <div class="rule"></div>
+    <p>Buscamos profissionais apaixonados por engenharia civil com perfil técnico e comprometimento. Valorizamos o crescimento contínuo e o trabalho em equipe.</p>
+  </div>
+
+
+  <div class="form-section">
+    <h3>Envie seu currículo</h3>
+    <p>Mesmo que não haja vaga aberta no seu perfil, adoramos conhecer novos talentos.</p>
+    <div class="form-grid">
+      <div class="form-field">
+        <label>Nome completo</label>
+        <input type="text" placeholder="Seu nome">
+      </div>
+      <div class="form-field">
+        <label>E-mail</label>
+        <input type="email" placeholder="seu@email.com">
+      </div>
+      <div class="form-field">
+        <label>Telefone</label>
+        <input type="tel" placeholder="(31) 9 0000-0000">
+      </div>
+    </div>
+    <div class="form-grid full" style="max-width:700px; margin-top:16px;">
+      <div class="form-field">
+        <label>Mensagem</label>
+        <textarea placeholder="Fale um pouco sobre você e sua experiência..."></textarea>
+      </div>
+    </div>
+    <div class="form-submit">
+      <button class="btn-primary">Enviar Currículo</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

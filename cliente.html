@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minas Consultoria — Área do Cliente</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- LOGIN -->
+  <div id="page-login" class="page active">
+    <div class="login-page">
+      <div class="login-box">
+        <h2>Área do Cliente</h2>
+        <p>Acesse sua conta para visualizar seus projetos.</p>
+
+        <div class="login-field">
+          <label>E-mail</label>
+          <input type="email" id="login-email" placeholder="seu@email.com">
+        </div>
+        <div class="login-field">
+          <label>Senha</label>
+          <input type="password" id="login-pass" placeholder="••••••••">
+        </div>
+        <p class="login-error" id="login-error">E-mail ou senha incorretos.</p>
+        <button class="btn-primary btn-full" onclick="doLogin()">Entrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div id="page-dashboard" class="page">
+    <div class="dashboard">
+      <div class="sidebar">
+        <div class="sidebar-logo">Minas<span>.</span>Portal</div>
+        <div class="sidebar-nav">
+          <div class="sidebar-item active">📁 Meus Projetos</div>
+          <div class="sidebar-item">📄 Documentos</div>
+          <div class="sidebar-item">🔔 Notificações</div>
+          <div class="sidebar-item">⚙️ Minha Conta</div>
+        </div>
+        <div class="sidebar-logout">
+          <button class="btn-logout" onclick="doLogout()">Sair</button>
+        </div>
+      </div>
+      <div class="dash-main">
+        <div class="dash-header">
+          <h2>Bem-vindo, João Silva</h2>
+          <p>Seus projetos e documentos técnicos estão disponíveis abaixo.</p>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card">
+            <span class="project-new">Novo</span>
+            <div class="project-card-icon">📋</div>
+            <h4>Laudo Estrutural — Residência Contorno</h4>
+            <p>Inspeção e análise de patologias. Relatório completo com recomendações técnicas.</p>
+            <div class="project-date">Entregue em 10/06/2025 · PDF · 2.4 MB</div>
+          </div>
+          <div class="project-card">
+            <div class="project-card-icon">🏗️</div>
+            <h4>Projeto Estrutural — Galpão Industrial</h4>
+            <p>Memória de cálculo, plantas de fôrma e detalhamento de armação.</p>
+            <div class="project-date">Entregue em 22/04/2025 · PDF · 8.1 MB</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/cliente.js"></script>
+</body>
+</html>
