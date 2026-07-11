@@ -1,13 +1,17 @@
-const USUARIOS = {
-  'adm@minas.com': 'adm123'
-}
-
-function doLogin() {
+async function doLogin() {
   const email = document.getElementById('login-email').value.trim()
   const senha = document.getElementById('login-pass').value
   const erro  = document.getElementById('login-error')
 
-  if (USUARIOS[email] && USUARIOS[email] === senha) {
+  const resposta = await fetch('http://127.0.0.1:8000/login', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email, senha })
+  })
+
+  const dados = await resposta.json()
+
+  if (dados.ok && dados.tipo === 'adm') {
     document.getElementById('page-login').classList.remove('active')
     document.getElementById('page-dashboard').classList.add('active')
   } else {

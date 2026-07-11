@@ -11,15 +11,14 @@
 
 <!-- NAV -->
 <nav>
-  <div class="logo">
-    <span class="logo-bar"></span>
-    Minas Consultoria
-  </div>
+ <div class="logo">
+  <img src="imagens/minas.png" alt="Minas Consultoria" height="80">
+</div>
   <ul class="nav-links">
-    <li><a onclick="showPage('home')" class="active" id="nav-home">Início</a></li>
-    <li><a onclick="showPage('about')" id="nav-about">Quem Somos</a></li>
-    <li><a onclick="showPage('jobs')" id="nav-jobs">Trabalhe Conosco</a></li>
-  </ul>
+  <li><a onclick="showPage('home')" class="active" id="nav-home">Início</a></li>
+  <li><a onclick="showPage('about')" id="nav-about">Quem Somos</a></li>
+  <li><a onclick="showPage('servicos')" id="nav-servicos">Serviços</a></li>
+</ul>
   <button class="btn-login" onclick="window.location.href='cliente.html'">Área do Cliente</button>
 </nav>
 
@@ -40,69 +39,15 @@
       </div>
     </div>
   </div>
-
-
-  <div class="section">
-    <p class="section-eyebrow">Serviços</p>
-    <h2>O que fazemos</h2>
-    <div class="rule"></div>
-    <div class="services-grid">
-      <div class="service-card">
-        
-        <h3>Projetos Estruturais</h3>
-        <p>Dimensionamento e detalhamento de estruturas em concreto armado, metálicas e mistas.</p>
-      </div>
-      <div class="service-card">
-        <h3>Laudos Técnicos</h3>
-        <p>Inspeções prediais, laudos de vistoria, análise de patologias e avaliações estruturais.</p>
-      </div>
-      <div class="service-card">
-        <h3>Consultoria Especializada</h3>
-        <p>Suporte técnico para construtoras, incorporadoras e gestão de obras complexas.</p>
-      </div>
-      <div class="service-card">
-        <h3>Fundações</h3>
-        <p>Projetos de fundações superficiais e profundas com análise geotécnica integrada.</p>
-      </div>
-      <div class="service-card">
-        <h3>Regularização de Imóveis</h3>
-        <p>Averbações, regularizações junto aos órgãos competentes e CREA.</p>
-      </div>
-      <div class="service-card">
-        <h3>Orçamento e Planejamento</h3>
-        <p>Orçamento executivo, cronograma físico-financeiro e gestão de custos de obra.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- PAGE: ABOUT -->
-<div class="page" id="page-about">
-  <div class="about-hero">
-    <div>
-      <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80" alt="Obra">
-    </div>
-    <div class="about-text">
-      <p class="section-eyebrow">Quem Somos</p>
-      <h2 style="font-family:'Playfair Display',serif; font-size:2rem; margin: 12px 0 20px;">Mais de uma década de excelência em engenharia</h2>
-      <div class="rule"></div>
-      <p>A Minas Consultoria nasceu em Belo Horizonte com o compromisso de entregar projetos de engenharia civil com rigor técnico e clareza de comunicação. Acreditamos que um bom projeto é aquele que o cliente entende.</p>
-      <p>Nossa equipe é formada por engenheiros civis com especializações em estruturas, geotecnia e gestão de obras, todos registrados no CREA-MG.</p>
-      <p>Atendemos desde reformas residenciais até projetos industriais de grande porte, sempre com acompanhamento personalizado de cada etapa.</p>
-    </div>
-  </div>
-</div>
-
-<!-- PAGE: JOBS -->
-<div class="page" id="page-jobs">
+  
+  <!-- FOOTER -->
+  <footer id="trabalhe-conosco">
   <div class="jobs-header">
     <p class="section-eyebrow">Trabalhe Conosco</p>
     <h2 style="font-family:'Playfair Display',serif; font-size:2rem; margin:12px 0 8px;">Faça parte do nosso time</h2>
     <div class="rule"></div>
-    <p>Buscamos profissionais apaixonados por engenharia civil com perfil técnico e comprometimento. Valorizamos o crescimento contínuo e o trabalho em equipe.</p>
+    <p>Buscamos profissionais apaixonados por engenharia civil com perfil técnico e comprometimento.</p>
   </div>
-
-
   <div class="form-section">
     <h3>Envie seu currículo</h3>
     <p>Mesmo que não haja vaga aberta no seu perfil, adoramos conhecer novos talentos.</p>
@@ -130,9 +75,70 @@
       <button class="btn-primary">Enviar Currículo</button>
     </div>
   </div>
+</footer>
+
 </div>
 
-<div class="toast" id="toast"></div>
+
+ <!-- PAGE: SERVICOS -->
+<div class="page" id="page-servicos">
+  <div class="section">
+    <p class="section-eyebrow">Serviços</p>
+    <h2>O que fazemos</h2>
+    <div class="rule"></div>
+    <div class="services-grid">
+      <div class="service-card">
+          <img src="imagens/minas.png" alt="Projetos Estruturais">
+        <h3>Projetos Estruturais</h3>
+        <p>Dimensionamento e detalhamento de estruturas em concreto armado, metálicas e mistas.</p>
+      </div>
+      <div class="service-card">
+          <img src="imagens/minas.png" alt="Laudos Técnicos">
+        <h3>Laudos Técnicos</h3>
+        <p>Inspeções prediais, laudos de vistoria, análise de patologias e avaliações estruturais.</p>
+      </div>
+      <div class="service-card">
+          <img src="imagens/minas.png" alt="consultoria especializada">
+        <h3>Consultoria Especializada</h3>
+        <p>Suporte técnico para construtoras, incorporadoras e gestão de obras complexas.</p>
+      </div>
+      <div class="service-card">
+          <img src="imagens/minas.png" alt="fundações">
+        <h3>Fundações</h3>
+        <p>Projetos de fundações superficiais e profundas com análise geotécnica integrada.</p>
+      </div>
+      <div class="service-card">
+          <img src="imagens/minas.png" alt="regularização de imóveis">
+        <h3>Regularização de Imóveis</h3>
+        <p>Averbações, regularizações junto aos órgãos competentes e CREA.</p>
+      </div>
+      <div class="service-card">
+          <img src="imagens/minas.png" alt="orçamento e planejamento">
+        <h3>Orçamento e Planejamento</h3>
+        <p>Orçamento executivo, cronograma físico-financeiro e gestão de custos de obra.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE: ABOUT -->
+<div class="page" id="page-about">
+  <div class="about-hero">
+    <div>
+      <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80" alt="Obra">
+    </div>
+    <div class="about-text">
+      <p class="section-eyebrow">Quem Somos</p>
+      <h2 style="font-family:'Playfair Display',serif; font-size:2rem; margin: 12px 0 20px;">Mais de uma década de excelência em engenharia</h2>
+      <div class="rule"></div>
+      <p>A Minas Consultoria nasceu em Belo Horizonte com o compromisso de entregar projetos de engenharia civil com rigor técnico e clareza de comunicação. Acreditamos que um bom projeto é aquele que o cliente entende.</p>
+      <p>Nossa equipe é formada por engenheiros civis com especializações em estruturas, geotecnia e gestão de obras, todos registrados no CREA-MG.</p>
+      <p>Atendemos desde reformas residenciais até projetos industriais de grande porte, sempre com acompanhamento personalizado de cada etapa.</p>
+    </div>
+  </div>
+</div>
+
+
 
 <script src="js/script.js"></script>
 </body>

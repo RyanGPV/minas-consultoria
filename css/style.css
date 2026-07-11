@@ -17,7 +17,7 @@ nav {
   position: fixed; top: 0; width: 100%; background: var(--white);
   border-bottom: var(--rule); z-index: 100;
   display: flex; align-items: center; justify-content: space-between;
-  padding: 0 60px; height: 64px;
+  padding: 0 60px; height: 90px;
 }
 .logo {
   font-family: 'Playfair Display', serif; font-size: 1.2rem;
@@ -41,7 +41,7 @@ nav {
 .btn-login:hover { background: var(--red-dark); }
 
 /* PAGES */
-.page { display: none; padding-top: 64px; min-height: 100vh; }
+.page { display: none; padding-top: 90px; min-height: 100vh; }
 .page.active { display: block; }
 
 /* DIVIDER */
@@ -98,27 +98,78 @@ nav {
 .stat-label { font-size: 0.8rem; color: var(--gray); margin-top: 8px; letter-spacing: 0.04em; }
 
 /* services */
-.section { padding: 80px 60px; }
-.section-eyebrow {
-  font-size: 0.72rem; font-weight: 600; letter-spacing: 0.16em;
-  text-transform: uppercase; color: var(--red);
+.section{
+    padding:80px 60px;
+    max-width:1400px;
+    margin:auto;
 }
-.section h2 {
-  font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 3vw, 2.2rem);
-  font-weight: 600; margin-top: 12px; line-height: 1.2;
+.section-eyebrow{
+    font-size:.75rem;
+    font-weight:600;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--red);
 }
-.services-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
-  margin-top: 48px; border: var(--rule);
+.section h2{
+    font-family:'Playfair Display', serif;
+    font-size:clamp(2rem,4vw,3rem);
+    font-weight:700;
+    margin-top:12px;
+    color:var(--black);
 }
-.service-card {
-  padding: 36px 32px; border-right: var(--rule); border-bottom: var(--rule);
-  transition: background 0.2s;
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+    margin-top:55px;
 }
-.service-card:hover { background: var(--light); }
-.service-icon { font-size: 1.6rem; margin-bottom: 16px; }
-.service-card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 10px; }
-.service-card p { font-size: 0.88rem; color: var(--gray); line-height: 1.6; }
+.service-card{
+    background:#fff;
+    border-radius:14px;
+    padding:38px 32px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    border:1px solid #ececec;
+    transition:all .35s ease;
+    position:relative;
+    overflow:hidden;
+}
+.service-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:6px;
+    height:100%;
+    background:var(--red);
+    transform:scaleY(0);
+    transform-origin:top;
+    transition:.35s;
+}
+.service-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 40px rgba(0,0,0,.14);
+}
+
+.service-card:hover::before{
+    transform:scaleY(1);
+}
+.service-card h3{
+    font-family:'Playfair Display', serif;
+    font-size:1.45rem;
+    margin-bottom:18px;
+    color:#1b2f4a;
+}
+.service-card p{
+    color:#666;
+    line-height:1.8;
+    font-size:.95rem;
+}
+.service-card img{
+    width:100%;
+    height:170px;
+    object-fit:cover;
+}
+
 
 /* ===== QUEM SOMOS ===== */
 .about-hero {
@@ -310,4 +361,37 @@ nav {
 
 .carousel-slide.active {
   opacity: 1;
+}
+
+footer#trabalhe-conosco {
+  background: var(--black); padding: 80px 60px; color: #fff;
+}
+
+footer#trabalhe-conosco h2,
+footer#trabalhe-conosco h3,
+footer#trabalhe-conosco label,
+footer#trabalhe-conosco p {
+  color: #fff;
+}
+
+footer#trabalhe-conosco .section-eyebrow {
+  color: var(--red);
+}
+
+footer#trabalhe-conosco input,
+footer#trabalhe-conosco select,
+footer#trabalhe-conosco textarea {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #fff;
+}
+
+footer#trabalhe-conosco .form-section {
+  background: transparent;
+  padding: 0;
+  margin-top: 40px;
+}
+
+footer#trabalhe-conosco .jobs-header {
+  padding: 0 0 40px 0;
 }
